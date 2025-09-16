@@ -1,1 +1,1 @@
-# exerccios-html-js
+# exercicios-html-js
