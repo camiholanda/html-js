@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orcamento Festa</title>
+</head>
+<body>
+    <form name="orcamento">
+        <label for="convidados">Convidados</label>
+        <input type="number" name="convidados" id="convidados">
+        <h3>Tipo de buffet</h3>
+        <input type="radio" name="buffet" id="basico" value="50">
+        <label for="basico">Buffet basico</label>
+        <input type="radio" name="buffet" id="premium" value="80">
+        <label for="premium">Buffet premium</label>
+        <h3>Adicionais</h3>
+        <input type="checkbox" name="adicionais" id="decoracao"><label for="decoracao">Decoração</label>
+        <br>
+        <input type="checkbox" name="adicionais"id="dj"><label for="dj">DJ</label>
+        <br>
+        <input type="checkbox" name="adicionais"id="fotografo"><label for="fotografo">Fotógrafo</label>
+        <br>
+        <button onclick="orcar">Calcular Orçamento</button>
+        <br>
+        Valor:
+        <input type="text" name="resultado" id="resultado">
+    </form>
+    <script>
+        function orcar(){
+            let convidados =  parseInt(orcamento.convidados.value);
+            let buffet = parseInt(orcamento.buffet.value);
+            let resultado = convidados * buffet;
+            orcamento.resultado.value = resultado;
+        }
+    </script>
+</body>
+</html>
