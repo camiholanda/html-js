@@ -3,55 +3,100 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculadora Peso Ideal</title>
+    <title>Conversor de Moedas</title>
   </head>
   <style>
-    body {
-      color: rgb(89, 3, 170);
-      font-size: small;
-      font-family: cursive;
+    body{
+        font-family:'Tahoma';
     }
-    button {
-      background-color: blueviolet;
-      color: antiquewhite;
-    }
-    .caixa {
-      background-color: rgb(203, 195, 243);
-      text-align: center;
-      padding: 10px;
-    }
-  </style>
-
-  <body>
-    <div class="caixa">
-      <h1>Calculadora Peso Ideal</h1>
-      <form name="ficha">
-        Altura:
-        <input type="text" name="altura" size="6" />
-        Sexo:
-        <select name="sexo">
-          <option value="feminino">Feminino</option>
-          <option value="masculino">Masculino</option>
-        </select>
-        <button type="button" onclick="calculapeso()">Enviar</button>
-        <br /><br />
-        Peso Ideal:
-        <input type="text" name="pesoideal" disabled />
-      </form>
-
-      <script type="text/javascript">
-        function calculapeso() {
-          var altura = ficha.altura.value;
-          var sexo = ficha.sexo.value;
-          var pesoideal;
-
-          if (sexo == "masculino") pesoideal = 72.7 * altura - 58;
-          else pesoideal = 62.1 * altura - 44.7;
-
-          ficha.pesoideal.value = Math.round(pesoideal);
-          return true;
+        form {
+        background-color: #f0f8ff;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 20px;
+        max-width: 300px;
+        margin: 20px auto;
         }
-      </script>
-    </div>
+
+        form select,
+        form input,
+        form button {
+        display: block;
+        width: 100%;
+        margin-bottom: 12px;
+        padding: 8px;
+        box-sizing: border-box;
+        }
+
+        form button {
+        background-color: darkslateblue;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 4px;
+        }
+        
+        form button:hover {
+        background-color: slateblue;
+        }
+        h1{
+            text-align: center;
+            color: darkslateblue;
+        }
+ </style>
+  <body>
+    <h1>Conversor de Moedas</h1>
+    <form name="conversor">
+      De:
+      <select name="moedaOrigem">
+        <option value="dolar">Dólar(R$5,00)</option>
+        <option value="euro">Euro(R$5,50)</option>
+        <option value="real">Real</option>
+      </select>
+      <br />
+      Para:
+      <select name="moedaDestino">
+        <option value="dolar">Dólar(R$5,00)</option>
+        <option value="euro">Euro(R$5,50)</option>
+        <option value="real">Real</option>
+      </select>
+      <br />
+      Quantia:
+      <input type="number" name="quantia" size="2" />
+      <button type="button" onclick="converter()">Converter</button>
+      <br />
+      Resultado:
+      <input type="text" name="resultado" disabled />
+    </form>
+
+    <script type="text/javascript">
+      function converter() {
+        let moedaOrigem = conversor.moedaOrigem.value;
+        let moedaDestino = conversor.moedaDestino.value;
+        let quantia = parseFloat(conversor.quantia.value);
+        let resultado = 0;
+
+        if (moedaOrigem == moedaDestino) {
+          alert("Escolher moedas diferentes");
+          return;
+        }
+
+        if (moedaOrigem == "dolar" && moedaDestino == "real") {
+          resultado = quantia * 5;
+        } else if (moedaOrigem == "real" && moedaDestino == "dolar") {
+          resultado = quantia / 5;
+        } else if (moedaOrigem == "euro" && moedaDestino == "real") {
+          resultado = quantia * 5.5;
+        } else if (moedaOrigem == "real" && moedaDestino == "euro") {
+          resultado = quantia / 5.5;
+        } else if (moedaOrigem == "dolar" && moedaDestino == "euro") {
+          resultado = (quantia * 5) / 5.5;
+        } else if (moedaOrigem == "euro" && moedaDestino == "dolar") {
+          resultado = (quantia * 5.5) / 5;
+        }
+
+        conversor.resultado.value = resultado.toFixed(2);
+      }
+    </script>
   </body>
 </html>
