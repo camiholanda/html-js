@@ -79,6 +79,9 @@ w-80 - 80 medida do tailwuind, convertendo para pixels é o valor multiplicado p
 </html>
 
 --------------------------------------------------------------
+img.w-full + enter igual a:
+        <img src="" alt="" class="w-full">
+
   
 
 
