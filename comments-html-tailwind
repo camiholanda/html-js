@@ -12,6 +12,7 @@ Layout Visual
   possibilita herdar caracterísicas de ambos objetos
 padding y > eixo y vertical > py-4 
 padding x > eixo x horizontal
+padding-b > paddig bottom > afasta borda do título(elemento)
 
 (Ao ser específica ao utilizar o padding, ele modificará de forma específica. Mas ao escrever sintaxe com apenas "p-<number>", modificará ambos os eixos)
 
