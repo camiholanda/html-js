@@ -34,7 +34,50 @@ utilizar a*4 e clicar enter > cria links por linha
 APIS > UM JEITO ÚNICO, UMA FONTE DE CONSULTA, PARA CONVERSAR COM UM BANCO DE DADOS
 EXEMPLO API: VIACEP
 
+FLEX > PARA ADD COLUNAS UMA AO LADO DA OUTRA
+
+w-80 - 80 medida do tailwuind, convertendo para pixels é o valor multiplicado por 4
+
+'''exemplo de código''' ----------------------------------
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impactos da Guerra</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body class="bg-gray-200">
+
+    <div id="topo-container" class=" bg-black text-white py-4">
+        <div class="container mx-auto bg-blue-800 flex items-center">
+            <h2 class="flex-1 font-semibold text-2xl" >IMPACTOS DA GUERRA</h2>
+            <div id="menu" class="flex-none flex gap-4">
+                <a href="" class="hover:bg-blue-400 py-2 px-8">Início</a>
+                <a href="" class="hover:bg-blue-400 py-2 px-3">Últimas notícias</a>
+                <a href="" class="hover:bg-blue-400 py-2 px-3">Comentários</a>
+                <a href="" class="hover:bg-blue-400 py-2 px-3">Login</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-6 container mx-auto flex border border-blue-800 flex gap-10">
+        <div class="bg-green-200 w-full">Coluna1</div>
+        <div class="bg-green-400 w-full">Coluna2</div>
+    </div>
+
+    <div id="rodape-container" class="mt-24 bg-black text-white p-4">
+        <div class="container mx-auto">
+                Todos os direitos reservados - 2026
+        </div>
+    </div>
     
+</body>
+</html>
+
+--------------------------------------------------------------
   
 
 
