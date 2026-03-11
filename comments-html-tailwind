@@ -1,1 +1,41 @@
+SPA > Single Page Application
+  Conceitos: WPA - Web Progressive Apps > Site que dá para instalar na área de trabalho e praticamente é um app 
+Criando os dois em tecnologias web
 
+Tailwind > bom para design e identidade visual
+Layout Visual
+
+ div#topo-container e enter OU <div id="topo-container"></div> > onde estará o topo do site, oferece recurso pra criar o topo de um site
+<div id="rodape-container" class=""></div> 
+
+ class="" :
+  possibilita herdar caracterísicas de ambos objetos
+padding y > eixo y vertical > py-4 
+padding x > eixo x horizontal
+
+(Ao ser específica ao utilizar o padding, ele modificará de forma específica. Mas ao escrever sintaxe com apenas "p-<number>", modificará ambos os eixos)
+
+CRIAR DIV COM DUAS CLASSES: 
+          <div class="container mx-auto"></div>
+MX-AUTO > AFASTAMENTO HORIZONTAL E CENTRALIZAÇÃO
+.CONTAINER > TAMANHO PADRÃO PARA NÃO OCUPAR 100% ?
+
+CRIAR COLUNAS NO TAILWIND >
+  SEPARAR DIV EM COLUNAS
+ADICIONAR CLASSES > flex
+
+TAILWIND POSSUI RECURSO - SIZING
+
+<div id="menu"></div> :
+        
+    
+  
+
+
+
+
+
+
+
+
+  
